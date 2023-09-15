@@ -30,25 +30,36 @@ See https://github.com/adobe-type-tools/cmap-resources
     <meta name="google" content="notranslate" />
     <meta name="immersive-translate-pdf-viewer" content="true" />
     <title>PDF.js viewer</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WVZZDLS');</script>
+    <!-- End Google Tag Manager -->
     <!-- This snippet is used in production (included from viewer.html) -->
     <link
       rel="resource"
       type="application/l10n"
       href="../pdf/locale/locale.properties"
     />
-    <script src="../build/pdf.js?v=3"></script>
+    <script src="../build/pdf.js?v={date}"></script>
 
-    <link rel="stylesheet" href="../pdf/viewer.css?v=3" />
-    <script src="../pdf/viewer.js?v=3"></script>
-    <link rel="stylesheet" href="../pdf/custom-pdf.css?v=3" />
+    <link rel="stylesheet" href="../pdf/viewer.css?v={date}" />
+    <script src="../pdf/viewer.js?v={date}"></script>
+    <link rel="stylesheet" href="../pdf/custom-pdf.css?v={date}" />
     <link rel="stylesheet" href="../pdf/jquery/jquery-ui-1.13.2.css" />
-    <script src="../pdf/entry.js?v=3"></script>
-    <script src="../pdf/immservie.js?v=3"></script>
+    <script src="../pdf/entry.js?v={date}"></script>
+    <script src="../pdf/immservie.js?v={date}"></script>
     <script src="../pdf/download/html2canvas.min.js"></script>
     <script src="../pdf/download/pdf-lib-1.17.1.min.js"></script>
   <link rel="stylesheet" href="../styles/inject.css" /></head>
   <body tabindex="1">
-    <link rel="stylesheet" href="../pdf/entry.css?v=3" />
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVZZDLS"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->    
+    <link rel="stylesheet" href="../pdf/entry.css?v={date}" />
     <div id="outerContainer">
       <div id="sidebarContainer">
         <div id="toolbarSidebar">
