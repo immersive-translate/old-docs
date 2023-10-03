@@ -34,9 +34,18 @@ const DownloadTypeEnum = {
 }
 let downloadType = DownloadTypeEnum.dual;
 let startDownload, cancelDialog;
-window.addEventListener("DOMContentLoaded", function () {
+init();
+let hasInited = false;
+function init() {
   setTimeout(() => {
-    const downloadManager = globalThis.PDFViewerApplication.downloadManager;
+    const downloadManager = globalThis?.PDFViewerApplication?.downloadManager;
+    if (!downloadManager) {
+      init();
+      return;
+    }
+    if (hasInited) return;
+    hasInited = true;
+
     const oldDownload = downloadManager.download.bind(downloadManager);
 
     downloadManager.download = function (blob, url, filename, options) {
@@ -76,7 +85,7 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     };
   }, 1000);
-});
+}
 
 async function handlePdf(pdfDoc) {
   try {
